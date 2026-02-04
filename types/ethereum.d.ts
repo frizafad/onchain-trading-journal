@@ -2,6 +2,6 @@ export {}
 
 declare global {
   interface Window {
-    ethereum?: unknown
+    ethereum?: Eip1193Provider
   }
 }

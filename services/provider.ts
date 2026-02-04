@@ -1,8 +1,8 @@
-import { BrowserProvider, type Eip1193Provider } from 'ethers'
+import { BrowserProvider } from "ethers";
 
-export function getBrowserProvider() {
-  if (typeof window === 'undefined') return null
-  if (!window.ethereum) return null
+export function getBrowserProvider(): BrowserProvider | null {
+  if (typeof window === "undefined") return null;
+  if (!window.ethereum) return null;
 
-  return new BrowserProvider(window.ethereum as Eip1193Provider)
+  return new BrowserProvider(window.ethereum);
 }
